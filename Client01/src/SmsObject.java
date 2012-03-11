@@ -1,6 +1,10 @@
 import java.io.*;
 
-
+/**
+ * 数据包类，消息类
+ * 仅作为deamo使用，根据需要要进行重写
+ * */
+ 
 public class SmsObject {
 	private int receiver;
 	private int data_type;
@@ -47,7 +51,9 @@ public class SmsObject {
 	public void setData(String data){
 		this.data = data;
 	}
-	
+	/**
+	*封装的一个消息发送的函数，仅作为调试时使用
+	*/
 	public SmsObject send(){
 		SmsObject sms = new SmsObject();
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

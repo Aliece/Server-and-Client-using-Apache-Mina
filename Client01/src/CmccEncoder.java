@@ -6,7 +6,9 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolEncoderAdapter;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 
-
+/**
+ * 编码器类
+ * */
 public class CmccEncoder extends ProtocolEncoderAdapter{
 	private final Charset charset;
 	
@@ -14,6 +16,13 @@ public class CmccEncoder extends ProtocolEncoderAdapter{
 		this.charset = charset;
 	}
 	
+	/**
+	 * 协议编码器
+	 * 将{@link SmsObject} 对象编码成字节流通过网络连接发送
+	 * @param session  当前的连接
+	 * @param message  需要编码的对象
+	 * @param out   用来将编码器最终产生的字节流输出到外层
+	 * */
 	@Override
 	public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception{
 		SmsObject sms = (SmsObject)message;

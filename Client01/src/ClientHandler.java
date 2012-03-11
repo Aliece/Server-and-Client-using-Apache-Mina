@@ -19,6 +19,11 @@ public class ClientHandler implements IoHandler {
 
 	}
 
+		/**
+	 * 当收到消息时调用此方法
+	 * @param session  当前的连接
+	 * @param message  收到的消息，已经解码成为SmsObject对象
+	 * */
 	@Override
 	public void messageReceived(IoSession session, Object message) throws Exception {
 		// TODO Auto-generated method stub
@@ -74,6 +79,11 @@ public class ClientHandler implements IoHandler {
 
 	}
 
+	
+	/**
+	 * 当连接建立时调用此方法，进行客户端的注册操作
+	 * @param session   当前的连接
+	 * */
 	@Override
 	public void sessionOpened(IoSession session) throws Exception {
 		// TODO Auto-generated method stub

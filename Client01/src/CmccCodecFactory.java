@@ -5,6 +5,10 @@ import org.apache.mina.filter.codec.ProtocolCodecFactory;
 import org.apache.mina.filter.codec.ProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolEncoder;
 
+
+/**
+ * 对编码器和解码器进行封装，方便调用
+ * */
 public class CmccCodecFactory implements ProtocolCodecFactory{
 
 	private final CmccEncoder encoder;
